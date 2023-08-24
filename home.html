@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="Undangan Pernikahan" />
+    
+    <title>Ricky & Feibi </title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/sass/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <style>
+          /* music controls */
+          .play-btn {
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            text-decoration: none;
+            transition: ease all 0.3s;
+            position: fixed;
+            z-index: 9999;
+            right: 20px;
+            top: 100px;
+        }
+
+        .pause-btn {
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            text-decoration: none;
+            transition: ease all 0.3s;
+            position: fixed;
+            z-index: 9999;
+            right: 20px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+      <!-- button play & pause -->
+      <div id="sound-controls">
+        <a href="#pause" class="pause-btn d-none" onclick="pauseButton()" id="pause-btn">
+            <img src="assets/music/pause.png" alt=""   srcset="" width="40">
+        </a>
+        <a href="#play" onclick="playButton()" class="play-btn d-none" id="play-btn">
+            <img src="assets/music/play-button.png" width="40" alt="">
+        </a>
+    </div>
+    <audio id="myAudio" autoplay>
+        <source src="assets/music/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="vertical-centered-box">
+                <div class="content">
+                    <div class="loader-circle"></div>
+                    <div class="loader-line-mask">
+                        <div class="loader-line"></div>
+                    </div>
+                    <img src="assets/images/preloader.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+        <!-- Start header -->
+        <!-- <header id="header">
+            <div class="wpo-site-header">
+                <nav class="navigation navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            
+                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand logo" href="index.html"><small>Ricky</small>Feibi<span><i
+                                                class="fi flaticon-dove"></i></span></a>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header> -->
+        <!-- end of header -->
+        <!-- start of hero -->
+        <section class="wpo-hero-style-4 back">
+            <div class="wedding-announcement">
+                <div class="couple-text">
+                    <h2 class="wow slideInUp" data-wow-duration="1s">Ricky & Feibi</h2>
+                    <!-- <p class="wow slideInUp" data-wow-duration="1.8s">We Are Getting Married Dec 8, 2022</p> -->
+                    <!-- start wpo-wedding-date -->
+                    <div class="wpo-wedding-date wow slideInUp" data-wow-duration="2.1s">
+                        <div class="clock-grids">
+                            <div id="clock"></div>
+                        </div>
+                    </div>
+                    <!-- end wpo-wedding-date -->
+                </div>
+            </div>
+        </section>
+        <!-- end of hero slider -->
+        <!-- start couple-section -->
+        <section class="couple-section section-padding" id="couple">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col col-lg-11">
+                        <div class="couple-area clearfix">
+                            <div class="couple-item bride">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4">
+                                        <div class="couple-img">
+                                            <img src="assets/images/couple/ricky.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="couple-text">
+                                            <h3 class="h1">dr. Ricky Lazarus Rumboirusi</h3>
+                                            <div class="">
+                                                <p class="mb-0 h1">Putra Pertama dari </p>
+                                                <p class="h4 mb-0">Bpk. Drs. Dirk Dicky Rumboirusi </p>
+                                                <p class="mb-0 h1">&</p>
+                                                <p class="mb-0 h4">Ibu Dr. Sariaty Hendrika Yohana Bei, S.H, M.Si</p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="couple-item groom">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-7 order-lg-1 order-2">
+                                        <div class="couple-text">
+                                            <h3>Feibiola Brigita Kaligis, S.E</h3>
+                                            <div class="">
+                                                <p class="mb-0 h1">Putri Pertama dari </p>
+                                                <p class="h4 mb-0">Bpk. Novry Kaligis </p>
+                                                <p class="mb-0 h1">&</p>
+                                                <p class="mb-0 h4">Ibu Anneke Sonya Rimporok</p>
+                                            </div>
+                                            <!-- <div class="social">
+                                                <ul>
+                                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                                    <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                                                </ul>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 order-lg-2 order-1">
+                                        <div class="couple-img">
+                                            <img src="assets/images/couple/fey.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+            <div class="shape-1">
+                <img src="assets/images/couple/shape-1.png" alt="">
+            </div>
+            <div class="shape-2">
+                <img src="assets/images/couple/shape-2.png" alt="">
+            </div>
+        </section>
+        <!-- end couple-section -->
+       
+               
+        <section class="wpo-event-section section-padding" id="event">
+            <div class="container">
+                <div class="row">
+                    <div class="wpo-section-title-s2">
+                        <div class="section-title-icon">
+                            <i class="fi flaticon-dove"></i>
+                        </div>
+                        <h2>Pemberkatan & Resepsi</h2>
+                    </div>
+                </div>
+                <div class="wpo-event-wrap">
+                    <div class="row">
+                        <div class="col col-lg-6 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>Pemberkatan Nikah</h2>
+                                    <ul>
+                                        <li>Jumat , 08 September, 2023 <br>
+                                            10:00  </li>
+                                        <li>GKI Marthen Luther Kamkey Abepura</li>
+                                  
+                                        <li> <a class=""  target="_blank"
+                                                href="https://goo.gl/maps/bo8LmWRVg7jRj4jv6">Lihat
+                                                Peta</a></li>
+
+                                                
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="col col-lg-6 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>Resepsi</h2>
+                                    <ul>
+                                        <li>Jumat , 08 September, 2023 <br>
+                                            18:00  </li>
+                                        <li>Hotel Horison Kotaraja</li>
+                                        <li> <a class=""  target="_blank"
+                                        href="https://goo.gl/maps/dZuSt1ymdkDuG2sr5">Lihat
+                                        Peta</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+        </section>
+     
+
+
+        <!-- start wpo-cta-section -->
+
+        <div class="wpo-cta-section">
+            <div class="conatiner-fluid">
+                <div class="row text-center">
+                    <div class="col-12 ">
+                        <h1 class="text-white">Dompet Digital</h1>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <p class="h2 text-white">Bank Mandiri</p>
+                        <p class="h5 text-white">An. Ricky Lazarus Rumboirusi</p>
+                        <p class="h5 text-white">1540 00737 9690</p>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button class="theme-btn-s3 rounded" id="btn-dompet"> Salin </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end wpo-cta-section -->
+
+    <!-- start wpo-portfolio-section -->
+    <section class="wpo-portfolio-section section-padding" id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="wpo-section-title">
+                    <div class="section-title-icon">
+                        <i class="fi flaticon-dove"></i>
+                    </div>
+                    <h2>Moment Manis</h2>
+                </div>
+            </div>
+            <div class="sortable-gallery">
+                <div class="gallery-filters"></div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="portfolio-grids gallery-container clearfix">
+                            <div class="grid" style="position: absolute; left: 0px; top: 0px;">
+                                <div class="img-holder">
+                                    <a href="assets/images/portfolio/1.jpg" class="fancybox"
+                                        data-fancybox-group="gall-1">
+                                        <img src="assets/images/portfolio/1.jpg"   class="img img-responsive">
+                                        <div class="hover-content">
+                                            <i class="ti-plus"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid" style="position: absolute; left: 177px; top: 0px;">
+                                <div class="img-holder" >
+                                    <a href="assets/images/portfolio/2.jpg" class="fancybox"
+                                        data-fancybox-group="gall-1">
+                                        <img src="assets/images/portfolio/2.jpg"  class="img img-responsive">
+                                        <div class="hover-content">
+                                            <i class="ti-plus"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid" style="position: absolute; left: 354px; top: 0px;">
+                                <div class="img-holder">
+                                    <a href="assets/images/portfolio/3.jpg" class="fancybox"
+                                        data-fancybox-group="gall-1">
+                                        <img src="assets/images/portfolio/3.jpg"  class="img img-responsive">
+                                        <div class="hover-content">
+                                            <i class="ti-plus"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid" style="position: absolute; left: 177px; top: 169px;">
+                                <div class="img-holder">
+                                    <a href="assets/images/portfolio/5.jpg" class="fancybox"
+                                        data-fancybox-group="gall-1">
+                                        <img src="assets/images/portfolio/5.jpg"  class="img img-responsive">
+                                        <div class="hover-content">
+                                            <i class="ti-plus"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid" style="position: absolute; left: 0px; top: 234px;">
+                                <div class="img-holder">
+                                    <a href="assets/images/portfolio/4.jpg" class="fancybox"
+                                        data-fancybox-group="gall-1">
+                                        <img src="assets/images/portfolio/4.jpg"  class="img img-responsive">
+                                        <div class="hover-content">
+                                            <i class="ti-plus"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid" style="position: absolute; left: 354px; top: 234px;">
+                                <div class="img-holder">
+                                    <a href="assets/images/portfolio/6.jpg" class="fancybox"
+                                        data-fancybox-group="gall-1">
+                                        <img src="assets/images/portfolio/6.jpg"  class="img img-responsive">
+                                        <div class="hover-content">
+                                            <i class="ti-plus"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end container -->
+    </section>
+    <!-- end wpo-portfolio-section -->
+
+        
+        <!-- start wpo-team-section -->
+       
+        
+        <!-- end wpo-team-section -->
+        <!-- start wpo-event-section -->
+
+ 
+        <!-- end wpo-event-section -->
+   
+
+
+        <!-- Doa -->
+        <section class="wpo-contact-section-s2 section-padding" id="RSVP">
+            <div class="container">
+                <div class="wpo-rsvp-wrap">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="wpo-contact-section-wrapper">
+                                <div class="wpo-contact-form-area">
+                                    <div class="wpo-section-title">
+                                        <div class="section-title-icon">
+                                            <i class="fi flaticon-dove"></i>
+                                        </div>
+                                        <h2>Doa & Ucapan</h2>
+                                    </div>
+                                        <div>
+                                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Anda">
+                                        </div>
+                                        <div class="radio-buttons">
+                                            <p>
+                                                <input type="radio" id="ya" value="Ya, Hadir" name="kehadiran" checked>
+                                                <label for="ya">Ya, Hadir</label>
+                                            </p>
+                                            <p>
+                                                <input type="radio" id="tidak" value="Maaf, Tidak Hadir" name="kehadiran">
+                                                <label for="tidak">Maaf, Tidak Hadir</label>
+                                            </p>
+                                        </div>
+                                  
+                                        <div>
+                                            <textarea name="doa" placeholder="Doa & Ucapan" class="form-control" id="doa" cols="30" rows="10"></textarea>
+                                        </div>
+                                       
+                                        <div class="submit-area">
+                                            <button type="button" onclick="kirim()" class="theme-btn-s3">Simpan</button>
+                                        </div>
+                                        
+                                    <div class="border-style"></div>
+                                </div>
+                                <div class="vector-1">
+                                    <img src="assets/images/rsvp/flower1.png" alt="">
+                                </div>
+                                <div class="vector-2">
+                                    <img src="assets/images/rsvp/flower2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="right-img">
+                        <img src="assets/images/rsvp/right.png" alt="">
+                    </div> -->
+                </div>
+            </div>
+            <div class="shape-1">
+                <img src="assets/images/rsvp/shape1.png" alt="">
+            </div>
+            <div class="shape-2">
+                <img src="assets/images/rsvp/shape2.png" alt="">
+            </div>
+        </section>
+
+        
+
+        <!-- start of wpo-site-footer-section -->
+        <footer class="wpo-site-footer">
+             
+            <div class="wpo-lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <p class="copyright"> Powered By <a
+                                    href="https://nokensoft.com/">Nokensoft <sup>PT. Noken Inovasi Teknologi Infomasi</sup> </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of wpo-site-footer-section -->
+         
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+
+    <script>
+       
+       var music = document.getElementById("myAudio");
+
+//     Swal.fire({         //displays a pop up with sweetalert
+//         icon: 'warning',
+//         text: 'Klik tombol ok untuk membuka undangan',
+//         timer: 300000
+
+//     })
+//     .then((willDelete) => {
+//   if (willDelete) {
+//            console.info('tes');
+//            music.play();
+//         }
+//     })
+
+    
+        
+    const copyBtn = document.getElementById('btn-dompet')
+    copyBtn.onclick = () => {
+    let teks = '1540007379690';
+    if(teks !== '1540007379690')
+    {
+        Swal.fire({         //displays a pop up with sweetalert
+        icon: 'error',
+        text: 'Norek salah !!',
+        showConfirmButton: true,
+        timer: 3000
+    });
+    }else{
+        navigator.clipboard.writeText(teks);
+        // let url =
+        Swal.fire({         //displays a pop up with sweetalert
+            icon: 'success',
+            text: 'Norek sudah tersalin !!',
+            showConfirmButton: true,
+            timer: 3000
+        });
+    }
+
+}
+        playButton()
+        function playButton() {
+            let btn_pause = document.getElementById("pause-btn");
+            let btn_play = document.getElementById("play-btn");
+            btn_pause.classList.remove("d-none");
+            btn_play.classList.add("d-none");
+            music.play();
+        }
+        
+        function pauseButton() {
+            let btn_pause = document.getElementById("pause-btn");
+            let btn_play = document.getElementById("play-btn");
+            btn_pause.classList.add("d-none");
+            btn_play.classList.remove("d-none");
+            music.pause();
+        }
+
+
+        function kirim()
+        {
+            var script_url = "https://script.google.com/macros/s/AKfycbzGuyVYhMbNuyuOa1pS1rBFghpEYCpZwm2eE3p1E4xLMaxMDDfyE-L1CcIiWUaD2Kyh/exec";
+
+            let nama = $("#nama").val();
+            let doa = $("#doa").val();
+            let kehadiran = document.querySelector('input[name="kehadiran"]:checked').value;
+
+            if (nama && doa && kehadiran) {
+                let url = script_url + "?callback=ctrlq&nama=" + nama + "&ucapan=" + doa + "&kehadiran=" + kehadiran + "&action=insert";
+                $("input[type='text']").val("");
+                $("textarea").val("");
+                var request = jQuery.ajax({
+                    crossDomain: true,
+                    url: url,
+                    method: "GET",
+                    dataType: "jsonp"
+                });
+
+
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    text: 'Pesan sudah tersimpan !',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            } else {
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'error',
+                    text: 'Semua belum terisi !!',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            }
+            
+        }
+        </script>
+</body>
+
+</html>
